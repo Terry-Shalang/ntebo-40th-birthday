@@ -3,405 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ntebo's 40th Birthday Celebration</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <title>Ntebo's 40th Birthday - Program</title>
     <style>
-        :root {
-            --gold: #D4AF37;
-            --dark: #1a1a1a;
-            --cream: #FFF8F0;
-            --gold-light: #E8D4A0;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Tenor Sans', sans-serif;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0a0a0a 100%);
-            color: var(--cream);
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            position: relative;
-            overflow-x: hidden;
+            padding: 40px 20px;
+            color: #fff;
         }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.02) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .invitation-container {
-            max-width: 650px;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .invitation-card {
-            background: rgba(26, 26, 26, 0.95);
-            border: 1px solid var(--gold);
-            position: relative;
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
             padding: 60px 50px;
-            box-shadow: 
-                0 0 60px rgba(212, 175, 55, 0.15),
-                inset 0 0 80px rgba(212, 175, 55, 0.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        .invitation-card::before,
-        .invitation-card::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            border: 1px solid var(--gold);
-        }
-
-        .invitation-card::before {
-            top: 15px;
-            left: 15px;
-            border-right: none;
-            border-bottom: none;
-        }
-
-        .invitation-card::after {
-            bottom: 15px;
-            right: 15px;
-            border-left: none;
-            border-top: none;
-        }
-
-        .ornament {
+        
+        .header {
             text-align: center;
-            margin-bottom: 35px;
-            animation: ornamentFade 1.5s ease-out 0.3s both;
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
-
-        @keyframes ornamentFade {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .ornament svg {
-            width: 80px;
-            height: 40px;
-            fill: none;
-            stroke: var(--gold);
-            stroke-width: 1.5;
-        }
-
-        .honoree-name {
+        
+        .title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
+            font-size: 3.5em;
             font-weight: 300;
+            color: #d4af37;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            font-weight: 300;
+            color: #e0e0e0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5em;
+            font-weight: 600;
+            color: #d4af37;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            margin: 20px 0;
+        }
+        
+        .mc-section {
             text-align: center;
-            letter-spacing: 0.1em;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .mc-label {
+            font-size: 0.9em;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 3s ease-in-out infinite;
-            background-size: 200% auto;
         }
-
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% center; }
-            50% { background-position: 100% center; }
-        }
-
-        .nickname {
-            font-size: 2rem;
-            font-style: italic;
+        
+        .mc-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2em;
+            color: #fff;
             font-weight: 400;
         }
-
-        .celebration-type {
-            text-align: center;
-            font-size: 0.95rem;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 40px;
-            opacity: 0.9;
+        
+        .program-list {
+            margin-top: 40px;
         }
-
-        .divider {
-            width: 100px;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--gold), transparent);
-            margin: 35px auto;
-        }
-
-        .invitation-text {
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 45px;
-            color: var(--cream);
-            opacity: 0.95;
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin: 40px 0;
-        }
-
-        .detail-item {
-            text-align: center;
-            padding: 20px;
-            border-left: 1px solid rgba(212, 175, 55, 0.3);
-            border-right: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .detail-label {
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 8px;
-            opacity: 0.8;
-        }
-
-        .detail-value {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            color: var(--cream);
-            line-height: 1.6;
-        }
-
-        .special-notes {
-            background: rgba(212, 175, 55, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 25px;
-            margin: 35px 0;
-            text-align: center;
-        }
-
-        .special-notes p {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            margin: 8px 0;
-        }
-
-        .dress-code {
-            color: var(--gold);
-            font-weight: 600;
-            letter-spacing: 0.1em;
-        }
-
-        .rsvp-section {
-            margin-top: 50px;
-            padding-top: 50px;
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-            text-align: center;
-        }
-
-        .rsvp-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            text-align: center;
-            color: var(--gold);
-            margin-bottom: 10px;
-            letter-spacing: 0.1em;
-        }
-
-        .rsvp-deadline {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--cream);
-            opacity: 0.8;
-            margin-bottom: 35px;
-        }
-
-        .rsvp-button {
-            display: inline-block;
-            padding: 20px 60px;
-            background: linear-gradient(135deg, var(--gold) 0%, #C9A55A 100%);
-            border: none;
-            color: var(--dark);
-            font-family: 'Tenor Sans', sans-serif;
-            font-size: 1.1rem;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            font-weight: 600;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        
+        .program-item {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            border-left: 4px solid #d4af37;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-
-        .rsvp-button::before {
+        
+        .program-item::before {
             content: '';
             position: absolute;
+            left: 0;
             top: 0;
-            left: -100%;
-            width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s;
+            width: 0;
+            background: rgba(212, 175, 55, 0.1);
+            transition: width 0.3s ease;
         }
-
-        .rsvp-button:hover::before {
-            left: 100%;
+        
+        .program-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(10px);
         }
-
-        .rsvp-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.5);
+        
+        .program-item:hover::before {
+            width: 100%;
         }
-
-        .rsvp-button:active {
-            transform: translateY(-1px);
+        
+        .program-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2em;
+            font-weight: 600;
+            color: #d4af37;
+            min-width: 50px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
-
-        .rsvp-note {
-            margin-top: 25px;
-            font-size: 0.85rem;
-            opacity: 0.7;
+        
+        .program-content {
+            flex: 1;
+            padding-left: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .program-title {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        
+        .program-description {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            font-weight: 300;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent);
+            margin: 40px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .footer-text {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            font-weight: 300;
             font-style: italic;
         }
-
+        
+        .sparkle {
+            display: inline-block;
+            color: #d4af37;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        
         @media (max-width: 768px) {
-            .invitation-card {
+            .container {
                 padding: 40px 30px;
             }
-
-            .honoree-name {
-                font-size: 2.5rem;
+            
+            .title {
+                font-size: 2.5em;
             }
-
-            .nickname {
-                font-size: 1.5rem;
+            
+            .number {
+                font-size: 3.5em;
             }
-
-            .detail-value {
-                font-size: 1.1rem;
+            
+            .program-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
             }
-
-            .rsvp-button {
-                padding: 18px 40px;
-                font-size: 1rem;
-                letter-spacing: 0.2em;
+            
+            .program-content {
+                padding-left: 0;
+                padding-top: 15px;
             }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
+            
+            .program-number {
+                min-width: auto;
             }
-            50% {
-                transform: scale(1.02);
-            }
-        }
-
-        .rsvp-button {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .rsvp-button:hover {
-            animation: none;
         }
     </style>
 </head>
 <body>
-    <div class="invitation-container">
-        <div class="invitation-card">
-            <div class="ornament">
-                <svg viewBox="0 0 100 40">
-                    <path d="M 0,20 Q 25,0 50,20 T 100,20" />
-                    <circle cx="50" cy="20" r="3" fill="currentColor"/>
-                </svg>
+    <div class="container">
+        <div class="header">
+            <div class="subtitle">Celebrating</div>
+            <h1 class="title">Ntebo</h1>
+            <div class="number">40</div>
+            <div class="subtitle">Program of the Day</div>
+        </div>
+        
+        <div class="mc-section">
+            <div class="mc-label">Master of Ceremonies</div>
+            <div class="mc-name">Mr Lefowa</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="program-list">
+            <div class="program-item">
+                <div class="program-number">1</div>
+                <div class="program-content">
+                    <div class="program-title">Purpose of the Gathering</div>
+                    <div class="program-description">Opening remarks and welcome</div>
+                </div>
             </div>
-
-            <h1 class="honoree-name">
-                Ntebo<br>
-                <span class="nickname">"Lolly"</span><br>
-                Shalang
-            </h1>
-
-            <p class="celebration-type">40th Birthday Luncheon</p>
-
-            <div class="divider"></div>
-
-            <p class="invitation-text">
-                You are cordially invited to celebrate<br>
-                a milestone birthday in elegant style
+            
+            <div class="program-item">
+                <div class="program-number">2</div>
+                <div class="program-content">
+                    <div class="program-title">Childhood Friend</div>
+                    <div class="program-description">Memories from the early years</div>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="program-number">3</div>
+                <div class="program-content">
+                    <div class="program-title">Colleague</div>
+                    <div class="program-description">Professional journey and achievements</div>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="program-number">4</div>
+                <div class="program-content">
+                    <div class="program-title">Neighbour</div>
+                    <div class="program-description">Community connections and friendship</div>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="program-number">5</div>
+                <div class="program-content">
+                    <div class="program-title">Cousin / Siblings</div>
+                    <div class="program-description">Family bonds and shared moments</div>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="program-number">6</div>
+                <div class="program-content">
+                    <div class="program-title">Child</div>
+                    <div class="program-description">A message from the heart</div>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="program-number">7</div>
+                <div class="program-content">
+                    <div class="program-title">Parents</div>
+                    <div class="program-description">Words of love and pride</div>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="program-number">8</div>
+                <div class="program-content">
+                    <div class="program-title">Toaster and Words of Good Wishes</div>
+                    <div class="program-description">Raising a glass to four decades</div>
+                </div>
+            </div>
+            
+            <div class="program-item">
+                <div class="program-number">9</div>
+                <div class="program-content">
+                    <div class="program-title">Gifts</div>
+                    <div class="program-description">Tokens of love and appreciation</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="footer-text">
+                <span class="sparkle">✦</span> 
+                A celebration of life, love, and forty beautiful years 
+                <span class="sparkle">✦</span>
             </p>
-
-            <div class="details-grid">
-                <div class="detail-item">
-                    <div class="detail-label">Date</div>
-                    <div class="detail-value">Saturday, 2nd May 2026</div>
-                </div>
-
-                <div class="detail-item">
-                    <div class="detail-label">Time</div>
-                    <div class="detail-value">11:00 AM</div>
-                </div>
-
-                <div class="detail-item">
-                    <div class="detail-label">Venue</div>
-                    <div class="detail-value">
-                        50405 Mabotse<br>
-                        Matshiding
-                    </div>
-                </div>
-            </div>
-
-            <div class="special-notes">
-                <p><span class="dress-code">Dress Code: Black Tie</span></p>
-                <p>Adults only celebration</p>
-                <p>BOA (Bring Own Alcohol)</p>
-            </div>
-
-            <div class="rsvp-section">
-                <h2 class="rsvp-title">RSVP</h2>
-                <p class="rsvp-deadline">Kindly respond by 27th April 2026</p>
-
-                <a href="https://forms.gle/daH8ugRojozSJ4UG8" class="rsvp-button" target="_blank">
-                    RSVP NOW
-                </a>
-
-                <p class="rsvp-note">Click the button above to submit your response</p>
-            </div>
         </div>
     </div>
 </body>
