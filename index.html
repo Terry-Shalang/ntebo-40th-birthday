@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: #000000;
             min-height: 100vh;
             padding: 40px 20px;
             color: #fff;
@@ -24,19 +24,18 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
+            background: #0a0a0a;
             border-radius: 30px;
             padding: 60px 50px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         
         .header {
             text-align: center;
             margin-bottom: 50px;
             padding-bottom: 40px;
-            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.4);
         }
         
         .title {
@@ -46,12 +45,13 @@
             color: #d4af37;
             margin-bottom: 15px;
             letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
         
         .subtitle {
             font-size: 1.3em;
             font-weight: 300;
-            color: #e0e0e0;
+            color: #fff;
             letter-spacing: 3px;
             text-transform: uppercase;
         }
@@ -61,7 +61,7 @@
             font-size: 5em;
             font-weight: 600;
             color: #d4af37;
-            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
             margin: 20px 0;
         }
         
@@ -69,9 +69,9 @@
             text-align: center;
             margin: 40px 0;
             padding: 30px;
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.05);
             border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         
         .mc-label {
@@ -98,7 +98,7 @@
             align-items: center;
             padding: 25px 30px;
             margin-bottom: 20px;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(212, 175, 55, 0.03);
             border-radius: 15px;
             border-left: 4px solid #d4af37;
             transition: all 0.3s ease;
@@ -113,13 +113,14 @@
             top: 0;
             height: 100%;
             width: 0;
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.08);
             transition: width 0.3s ease;
         }
         
         .program-item:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(212, 175, 55, 0.08);
             transform: translateX(10px);
+            border-left-color: #f4d03f;
         }
         
         .program-item:hover::before {
@@ -159,7 +160,7 @@
         
         .divider {
             height: 1px;
-            background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent);
+            background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.6), transparent);
             margin: 40px 0;
         }
         
@@ -167,25 +168,26 @@
             text-align: center;
             margin-top: 50px;
             padding-top: 30px;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
         }
         
         .footer-text {
             font-size: 0.9em;
-            color: #b0b0b0;
+            color: #d4af37;
             font-weight: 300;
             font-style: italic;
         }
         
         .sparkle {
             display: inline-block;
-            color: #d4af37;
+            color: #f4d03f;
             animation: sparkle 2s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
         }
         
         @keyframes sparkle {
             0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
+            50% { opacity: 0.6; transform: scale(1.2); }
         }
         
         @media (max-width: 768px) {
